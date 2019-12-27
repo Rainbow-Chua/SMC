@@ -1,0 +1,91 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <p></p>
+      </div>
+      <div class="col-sm-8">
+        <h1>Summary of Upload</h1>
+      </div>
+      <div class="col-sm-2">
+        <p></p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-2">
+        <p></p>
+      </div>
+      <div class="col-sm-8">
+        <form  [formGroup]="updateIPOFrom" >
+          <div class="row">
+            <div class="col-sm-2 divm">
+              <span>Company Name</span>
+            </div>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                formControlName="stockExchange"
+              [(ngModel)]="stockExchange"
+              placeholder="Stock Exchange" 
+                class="form-control"
+                style="width: 200px "
+              />
+            </div>
+          </div>
+         
+          <br />
+          <div class="row">
+            <div class="col-sm-2 divm">
+              <span>Stock Exchange</span>
+            </div>
+            <div class="col-sm-9">
+                    <input
+                    type="text"
+                    class="form-control"
+                    formControlName="brief"
+                    [(ngModel)]="brief"
+                    placeholder="Brief"
+                    style="width: 200px "
+                  />
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-sm-2 divm">
+              <span>No. of Records Imported</span>
+            </div>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="contactAddress"
+                [(ngModel)]="contactAddress"
+                placeholder="Contact Address"
+                style="width: 200px "
+              />
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-sm-2 divm">
+              <span>From Date</span>
+            </div>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="remarks"
+                [(ngModel)]="remarks"
+                placeholder="Remarks"
+                style="width: 200px "
+              />
+            </div>
+          </div>
+         <br>
+        </form>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>
+  

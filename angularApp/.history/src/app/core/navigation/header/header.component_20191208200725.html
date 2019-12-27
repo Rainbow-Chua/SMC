@@ -1,0 +1,42 @@
+<!-- <p>header works!</p>
+<mat-toolbar [color]="'neutral'">
+    <mat-toolbar-row id="header">
+  
+      <button mat-button [matMenuTriggerFor]="menu" *ngIf="!isDesktop">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngIf="isStaff"> <a routerLink="/home/searching-file"><span>Searching File</span></a></button>
+        <button mat-menu-item *ngIf="isStaff"> <a routerLink="/home/create-bul-file"><span>Create BUL File</span></a> </button>
+        <button mat-menu-item *ngIf="isStaff"> <a routerLink="/home/create-bs-file"><span>Create BS File</span></a></button>   
+        <button mat-menu-item *ngIf="isAdmin"><a routerLink="/home/access-right"><span>Admin</span></a></button>
+      </mat-menu>
+      <div id="brand-logo">
+        <img *ngIf="isDesktop" alt="Cathay Pacific" src="assets/logo/cx-logo.png" />
+        <img *ngIf="!isDesktop" alt="Cathay Pacific" src="assets/logo/cx-logo-small.png" />
+      </div>
+  
+      <span id="application-name-desktop">
+        <h4>Baggage Services Telex and Service Filing System{{showAdminTitle}}</h4>
+      </span>
+      <span style="margin-left: auto;"><a href="#" (click)='toLogout()' >Logout</a></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  <div *ngIf="isDesktop" id="navigation-desktop">
+    <ul class="navigation-items">
+   
+      <li routerLinkActive="active" *ngIf="isStaff" >
+        <a routerLink="/home/searching-file"><span>Searching File</span></a>
+      </li>
+      <li routerLinkActive="active"  *ngIf="isStaff">
+        <a routerLink="/home/create-bul-file"><span>Create BUL File</span></a>
+      </li>
+      <li routerLinkActive="active" *ngIf="isStaff" >
+        <a routerLink="/home/create-bs-file"><span>Create BS File</span></a>
+      </li>
+      <li routerLinkActive="active" *ngIf="isAdmin">
+        <a routerLink="/home/access-right"><span>Admin</span></a>
+      </li>
+    </ul>
+  </div> -->

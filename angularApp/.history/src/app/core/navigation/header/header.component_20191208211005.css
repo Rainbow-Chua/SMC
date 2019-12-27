@@ -1,0 +1,8 @@
+/* body{ text-align:center}  */
+.divCss{margin:0 auto;border:1px ;width:90%;height:100px}
+.divLeft{
+    width:100%;
+    position:absolute; 
+     right:10px
+}
+.div-right{width:20%;float: right;} 

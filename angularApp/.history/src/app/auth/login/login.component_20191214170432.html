@@ -1,0 +1,53 @@
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Login</h1>
+    </div>
+    <div class="row">
+            <div class="col-sm-2">
+                <p> </p>
+            </div>
+        <div class="col-sm-8">
+                <span style="color: rgb(236, 30, 30);"> {{status}}</span>
+        </div>
+        <div class="col-sm-2">
+            <p> </p>
+         </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <p> </p>
+        </div>
+        <div class="col-sm-8">
+            <div style="padding: 100px 100px 10px;">
+                <form  [formGroup]="formLogin">
+                    <div class="input-group">
+                        <span class="input-group-addon">Username</span>
+                        <input type="text" class="form-control"
+                        
+                        formControlName="userName"
+                         [(ngModel)]="userName"
+                        placeholder="userName"   style="width: 200px ">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon">Password</span>
+                        <input type="text" class="form-control" 
+                        formControlName="passWord" 
+                         [(ngModel)]="passWord"   style="width: 200px "  >
+
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-primary" style="height: 50px;width: 100px " (click)="loginSubmit()">Submit</button>&nbsp;&nbsp;
+                    <button type="button" class="btn btn-primary" style="height: 50px;width: 100px "  (click)="signup()">Signup</button>
+                </form>
+            </div>
+
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+</div>
+<!-- 
+</body>
+</html> -->

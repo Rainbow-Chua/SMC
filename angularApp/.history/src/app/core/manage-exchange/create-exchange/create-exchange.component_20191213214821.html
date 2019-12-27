@@ -1,0 +1,101 @@
+<div class="container">
+
+    <div class="row">
+      <div class="col-sm-2">
+        <p></p>
+      </div>
+      <div class="col-sm-8">
+        <h1>create New exchange</h1>
+      </div>
+  
+      <div class="col-sm-2">
+        <p></p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-2">
+        <p></p>
+      </div>
+      <div class="col-sm-8">
+        <form  [formGroup]="createCompanyFrom" >
+          <div class="row">
+            <div class="col-sm-2 divm">
+              <span>Stock Exchange</span>
+            </div>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                formControlName="companyName"
+              [(ngModel)]="companyName"
+              placeholder="Company Name" 
+                class="form-control"
+                style="width: 200px "
+              />
+            </div>
+          </div>
+         
+          <br />
+          <div class="row">
+            <div class="col-sm-2 divm">
+              <span>Brief</span>
+            </div>
+            <div class="col-sm-9">
+                    <input
+                    type="text"
+                    class="form-control"
+                    formControlName="ceo"
+                    [(ngModel)]="ceo"
+                    placeholder="CEO"
+                    style="width: 200px "
+                  />
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-sm-2 divm">
+              <span>Contact Address</span>
+            </div>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="turnOver"
+                [(ngModel)]="turnOver"
+                placeholder="Trun Over"
+                style="width: 200px "
+              />
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-sm-2 divm">
+              <span>Remarks</span>
+            </div>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="briefDescription"
+                [(ngModel)]="briefDescription"
+                placeholder="Brief Description"
+                style="width: 200px "
+              />
+            </div>
+          </div>
+          
+         <br>
+          <button
+            type="button"
+            class="btn btn-primary"
+            style="height: 35px;width: 100px "
+            (click)="save()"
+          >
+          Save
+          </button>
+        </form>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>
+  

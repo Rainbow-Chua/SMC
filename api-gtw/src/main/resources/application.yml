@@ -1,0 +1,18 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: api-gateway
+
+eureka:
+  instance:
+    hostname: localhost
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka/
+
+jwt:
+  session:
+    timeout: 1800
+  secret: simpleJwtSecret
+
+

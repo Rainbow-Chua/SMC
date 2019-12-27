@@ -1,0 +1,7 @@
+<div class="div1">
+  <label for="file">Upload file</label>
+  <label>Select Excel file to be uploaded</label><input id="file" #file type="file" multiple (change)="upload(file)" />
+  <span *ngIf="uploadProgress > 0 && uploadProgress < 100">
+    {{ uploadProgress }}%
+  </span>
+</div>

@@ -1,0 +1,96 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <p></p>
+      </div>
+      <div class="col-sm-8">
+        <h1>Summary of Upload</h1>
+      </div>
+      <div class="col-sm-2">
+        <p></p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-2">
+        <p></p>
+      </div>
+      <div class="col-sm-8">
+        <!-- <form  [formGroup]="updateIPOFrom" > -->
+          <div class="row">
+            <div class="col-sm-3 divm">
+              <span>Company Name</span>
+            </div>
+            <div class="col-sm-5">
+              <!-- <input
+                type="text"
+                formControlName="companyName"
+              [(ngModel)]="companyName"
+              placeholder="Company Name" 
+                class="form-control"
+                style="width: 200px "
+              /> -->
+              {{companyName}}
+            </div>
+          </div>
+         
+          <br />
+          <div class="row">
+            <div class="col-sm-3 divm">
+              <span>Stock Exchange</span>
+            </div>
+            <div class="col-sm-5">
+                    <!-- <input
+                    type="text"
+                    class="form-control"
+                    formControlName="stockExchange"
+                    [(ngModel)]="stockExchange"
+                    placeholder="Stock Exchange"
+                    style="width: 200px "
+                  /> -->
+                  {{stockExchange}}
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-sm-3 divm">
+              <span>No. of Records Imported</span>
+            </div>
+            <div class="col-sm-5">
+              <!-- <input
+                type="text"
+                class="form-control"
+                formControlName="totalShares"
+                [(ngModel)]="totalShares"
+                placeholder="Records Imported"
+                style="width: 200px "
+              /> -->
+              {{pricePerShare}}
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-sm-3 divm">
+              <span>From Date</span>
+            </div>
+            <div class="col-sm-5">
+                {{openDateTime}}
+              <!-- <input
+                type="text"
+                class="form-control"
+                formControlName="openDateTime"
+                [(ngModel)]="openDateTime"
+                placeholder="From Date"
+                style="width: 200px "
+              /> -->
+            </div>
+          </div>
+         <br>
+        <!-- </form> -->
+      </div>
+      <div class="col-sm-2"></div>
+     
+    </div>
+  </div>
+  

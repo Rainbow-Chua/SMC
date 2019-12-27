@@ -1,0 +1,93 @@
+<div class="container">
+
+        <div class="row">
+          <div class="col-sm-4">
+            <h1>Compare Company</h1>
+          </div>
+          <div class="col-sm-7">
+            <div *ngIf="status">
+                  <span style="color: rgb(236, 30, 30);"> {{status}}</span>
+              </div>
+          </div>
+      
+          <div class="col-sm-1">
+            <p></p>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-8">
+              <div class="row">
+                <div class="col-sm-2 ">
+                  <span>Select Company/Sector</span>
+                </div>
+                <div class="col-sm-9">
+                    <select style="width: 200px " formControlName='company' class="form-control"  [(ngModel)]="company">
+                        <option value="Company" selected>Company</option>
+                        <option value="Sector">Sector</option>
+                    </select>
+                </div>
+              </div>
+              <br />
+              <div class="row">
+                <div class="col-sm-2 ">
+                  <span>Select Stock Exchange</span>
+                </div>
+                <div class="col-sm-9">
+                    <select style="width: 200px " formControlName='exchange' class="form-control"  [(ngModel)]="exchange">
+                        <option value="BSE" selected>BSE</option>
+                        <option value="NSE">NSE</option>
+                    </select>
+                </div>
+              </div>
+              <br />
+              <div class="row">
+                <div class="col-sm-2 ">
+                  <span>Company Name</span>
+                </div>
+                <div class="col-sm-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="companyName"
+                  [(ngModel)]="companyName"
+                  placeholder="Company Name"
+                    style="width: 200px "
+                  />
+                </div>
+              </div>
+              <br />
+              <div class="row">
+                <div class="col-sm-2 ">
+                  <span>From Period</span>
+                </div>
+                <div class="col-sm-3 ">
+                </div>
+                <div class="col-sm-2">
+                    <span>  To period</span>
+                </div>
+                <div class="col-sm-3 ">
+                    </div>
+              </div>
+              <br />
+              <div class="row">
+                <div class="col-sm-3 ">
+                    <span>Specify  Periodicity</span>
+                </div>
+                <div class="col-sm-9">
+                </div>
+            </div>
+              
+              <br>
+              <button
+                type="button"
+                class="btn btn-primary"
+                style="height: 35px;width: 200px "
+                (click)="save()"
+              >
+              Generate  Map
+              </button>
+      
+          </div>
+      </div>
+      

@@ -1,0 +1,142 @@
+<div class="container">
+
+        <div class="row">
+          <div class="col-sm-2">
+            <p></p>
+          </div>
+          <div class="col-sm-8">
+            <h1>Edit Company</h1>
+            <div *ngIf="status">
+                  <span style="color: rgb(236, 30, 30);"> {{status}}</span>
+              </div>
+          </div>
+      
+          <div class="col-sm-2">
+            <p></p>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-2">
+            <p></p>
+          </div>
+          <div class="col-sm-8">
+            <form  [formGroup]="editCompanyFrom" >
+              <div class="row">
+                <div class="col-sm-2 divm">
+                  <span>Company Name</span>
+                </div>
+                <div class="col-sm-9">
+                  <input
+                    type="text"
+                    formControlName="companyName"
+                  [(ngModel)]="companyName"
+                  placeholder="Company Name" 
+                    class="form-control"
+                    style="width: 200px "
+                  />
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-sm-2 divm">
+                    <span>Sector Name</span>
+                  </div>
+                  <div class="col-sm-9">
+                    <input
+                      type="text"
+                      formControlName="sector"
+                    [(ngModel)]="sector"
+                    placeholder="Sector Name" 
+                      class="form-control"
+                      style="width: 200px "
+                    />
+                  </div>
+                </div>
+              
+              <br />
+              <div class="row">
+                <div class="col-sm-2 divm">
+                  <span>CEO Name & borad Member</span>
+                </div>
+                <div class="col-sm-9">
+                        <input
+                        type="text"
+                        class="form-control"
+                        formControlName="ceo"
+                        [(ngModel)]="ceo"
+                        placeholder="CEO"
+                        style="width: 200px "
+                      />
+                   <!-- <select style="width: 200px " formControlName='coe' class="form-control" placeholder="CEO" [(ngModel)]="ceo">
+      
+                  <option value="BSE" selected>BSE</option>
+                  <option value="USE">NSE</option>
+                   </select> -->
+                </div>
+              </div>
+              <br />
+              <div class="row">
+                <div class="col-sm-2 divm">
+                  <span>Trun Over</span>
+                </div>
+                <div class="col-sm-9">
+                  <input
+                    type="number"
+                    class="form-control"
+                    formControlName="turnOver"
+                    [(ngModel)]="turnOver"
+                    placeholder="Trun Over"
+                    style="width: 200px "
+                  />
+                </div>
+              </div>
+              <br />
+              <div class="row">
+                <div class="col-sm-2 divm">
+                  <span>Brief Description</span>
+                </div>
+                <div class="col-sm-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="briefDescription"
+                    [(ngModel)]="briefDescription"
+                    placeholder="Brief Description"
+                    style="width: 200px "
+                  />
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                    <div class="col-sm-2 divm">
+                      <span>IPO Date</span>
+                    </div>
+                    <div class="col-sm-9">
+                      <input
+                        type="text"
+                        class="form-control"
+                        formControlName="ipoDate"
+                        [(ngModel)]="ipoDate"
+                        placeholder="IPO Date"
+                        style="width: 200px "
+                      />
+                    </div>
+                  </div>
+             <br>
+             <br>
+              <button
+                type="button"
+                class="btn btn-primary"
+                style="height: 35px;width: 100px "
+                (click)="save()"
+              >
+              Save
+              </button>
+            </form>
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+        
+ </div>
+      

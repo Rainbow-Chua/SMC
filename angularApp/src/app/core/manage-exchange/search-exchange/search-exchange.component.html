@@ -1,0 +1,42 @@
+<div  class="div1">
+    <div class="div2">
+        <b>List of Exchange</b> 
+    </div>
+    <br>
+    <table class="table table-striped table-bordered" style="width: 800px;">
+                <thead style="background-color: #005d63;color:#f2f8f8;">
+                  <tr>
+                    <th></th>
+                    <th>Stock Exchange</th>
+                    <th>Brief</th>
+                    <th>Contact Address</th>
+                    <th>Remarks</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let exchange of ExchangeList; index as id">					
+               
+                  <tr>
+                    <td>
+                      {{ exchange.id }}
+                    </td>
+                    <td> {{exchange.stockExchange}} </td>
+                    <td> {{exchange.brief}} </td>
+                    <td> {{exchange.contactAddress }} </td>
+                    <td> {{exchange.remarks}} </td>
+                    <td>
+                  <button  [routerLink]="['/home/editExchange',exchange.id]">
+                      Edit
+                  </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+          <br>
+          <div class="div2">
+          <button  [routerLink]="['/home/createExchange']">
+          other Exchange
+        </button>
+      </div>
+
+</div>

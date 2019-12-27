@@ -1,0 +1,146 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-2">
+      <p></p>
+    </div>
+    <div class="col-sm-8">
+      <h1>Signup</h1>
+      <div *ngIf="status">
+            <span style="color: rgb(236, 30, 30);"> {{status}}</span>
+        </div>
+    </div>
+
+    <div class="col-sm-2">
+      <p></p>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-2">
+      <p></p>
+    </div>
+    <div class="col-sm-8">
+      <form  [formGroup]="formSignup" >
+        <div class="row">
+          <div class="col-sm-2 divm">
+            <span>User Name</span>
+          </div>
+          <div class="col-sm-9">
+            <input
+              type="text"
+              formControlName="userName"
+            [(ngModel)]="userName"
+            placeholder="User Name" 
+              class="form-control"
+              style="width: 200px "
+            />
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-sm-2 divm">
+            <span>Password</span>
+          </div>
+          <div class="col-sm-9">
+            <input
+              type="text"
+              formControlName="passWord"
+            [(ngModel)]="passWord"
+            placeholder="Password"
+              class="form-control"
+              style="width: 200px "
+            />
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-sm-2 divm">
+            <span>Email</span>
+          </div>
+          <div class="col-sm-9">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="eMail"
+            [(ngModel)]="eMail"
+            placeholder="E-mail"
+              style="width: 200px "
+            />
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-sm-2 divm">
+            <span>User Type</span>
+          </div>
+          <div class="col-sm-9">
+             <select style="width: 200px " formControlName='userType' class="form-control" placeholder="User Type" [(ngModel)]="userType">
+
+            <option value="Admin" selected>Admin</option>
+            <option value="User">User</option>
+             </select>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-sm-2 divm">
+            <span>Mobile Number</span>
+          </div>
+          <div class="col-sm-9">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="mobileNumber"
+              [(ngModel)]="mobileNumber"
+              placeholder="Mobile Number"
+              style="width: 200px "
+            />
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-sm-2 divm">
+            <span>Confirmed</span>
+          </div>
+          <div class="col-sm-9">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="confirmed"
+              [(ngModel)]="confirmed"
+              placeholder="Confirmed"
+              style="width: 200px "
+            />
+          </div>
+        </div>
+        <br>
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="height: 35px;width: 100px "
+          (click)="signupSubmit()"
+        >
+          signup</button
+        >&nbsp;&nbsp;
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="height: 35px;width: 100px "
+          (click)="clearSubmit()"
+        >
+          Reset
+        </button>&nbsp;&nbsp;
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="height: 35px;width: 100px "
+          (click)="goToLogin()">
+        goToLogin
+        </button>
+      </form>
+
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>

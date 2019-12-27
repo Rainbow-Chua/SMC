@@ -1,0 +1,19 @@
+.div1{
+    left:5%;
+    position: relative;
+}
+
+.div2{
+    left:28%;
+    position: relative;
+}
+
+.div3{
+    left:50%;
+    position: relative;
+}
+
+span {
+    font-size: 12px;
+    font-style: oblique;
+}

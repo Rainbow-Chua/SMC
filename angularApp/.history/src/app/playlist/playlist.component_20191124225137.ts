@@ -1,0 +1,20 @@
+import { Component, OnInit } from '@angular/core';
+// import { PlayerModule } from '';
+@Component({
+  selector: 'app-playlist',
+  templateUrl: './playlist.component.html',
+  styleUrls: ['./playlist.component.css']
+})
+export class PlaylistComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+
+  }
+
+  setUrl(sUrl: string) {
+    console.log('URL:' + sUrl);
+  }
+
+}

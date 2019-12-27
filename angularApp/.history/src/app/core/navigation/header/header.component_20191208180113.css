@@ -1,0 +1,123 @@
+@import '../../../../scss/variables/variables';
+/*--------------------------------------------------------*\
+  Branding Header
+\*--------------------------------------------------------*/
+.mat-icon-button {
+  @media only screen and (min-width: 992px) {
+    display: none;
+  }
+}
+
+.mat-neutral {
+  background-color: $color-secondary-cx-dark-grey-rgb;
+  color: $color-primary-white-rgb;
+}
+
+.mat-toolbar {
+  height: 90px;
+  @media only screen and (max-width: 991px) {
+    height: 45px;
+  }
+}
+
+#header {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (min-width: 992px) {
+    justify-content: flex-start;
+  }
+
+  #application-name-desktop {
+    padding-top: 14px;
+    @media only screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  mat-icon {
+    color: $color-primary-white-rgb;
+  }
+
+  #brand-logo {
+    margin: 0 auto;
+
+    @media only screen and (min-width: 992px) {
+      margin: 0;
+    }
+  }
+}
+
+/*--------------------------------------------------------*\
+  Desktop Navigation
+\*--------------------------------------------------------*/
+#navigation-desktop {
+  background-color: $color-primary-white-rgb;
+  border-bottom: 2px solid $color-secondary-cx-light-grey-rgb;
+  height: 50px;
+  margin: auto;
+
+  .navigation-items {
+    align-items: stretch;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    list-style: none;
+  }
+
+  a {
+    color: $color-secondary-cx-dark-grey-rgb;
+    padding: 15px 0;
+    text-decoration: none;
+
+    span {
+      border-left: 1px dotted $color-tertiary-cx-unselectable-rgb;
+      padding: 0 0.813em;
+    }
+
+    &:hover {
+      color: $color-primary-cx-red-rgb
+    }
+  }
+
+  ul {
+    height: 100%;
+    margin: 0;
+  }
+
+  li {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &.active {
+      background-image: linear-gradient(-180deg, $color-primary-white-rgb 0%, $navigation-color-hover-slate 100%);
+      border-bottom: 4px solid $color-primary-cx-red-rgb;
+      color: $color-primary-cx-red-rgb;
+
+      a {
+        color: $color-primary-cx-red-rgb;
+      }
+    }
+
+    &:hover {
+      border-bottom: 4px solid $color-primary-cx-red-rgb;
+      color: $color-primary-cx-red-rgb;
+
+      span {
+        // align-items: center;
+        color: $color-primary-cx-red-rgb;
+        // display: flex;
+      }
+    }
+
+    &:last-child {
+      span {
+        border-right: 1px dotted $color-tertiary-cx-unselectable-rgb;
+      }
+    }
+  }
+}

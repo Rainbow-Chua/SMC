@@ -1,0 +1,50 @@
+<!-- <div class="div1"> -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2">
+      <p></p>
+    </div>
+    <div class="col-sm-8">
+      <label for="file">Import Excel</label>
+    </div>
+    <div class="col-sm-2">
+      <p></p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-sm-3">
+            <label>Select Excel file to be uploaded</label >
+    </div>
+    <div class="col-sm-5">
+      
+        <input id="file" #file type="file" multiple (change)="upload(file)" />
+      <span *ngIf="uploadProgress > 0 && uploadProgress < 100">
+        {{ uploadProgress }}%
+      </span>
+    </div>
+
+    <div class="col-sm-2">
+     
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-sm-5">
+        <a style="cursor:pointer" href="{{url}}" download="sample_stock_data">
+            Click Here to Download sample Excel file
+          </a>
+    </div>
+    <div class="col-sm-6">
+      <span style="color: rgb(236, 30, 30);"> {{status}}</span>
+    </div>
+    <div class="col-sm-1">
+     
+    </div>
+  </div>
+  <br />
+</div>
+
+<!-- </div> -->

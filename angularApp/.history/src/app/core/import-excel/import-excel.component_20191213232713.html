@@ -1,0 +1,16 @@
+<div id="upload" class="form-group">
+            <label for="lastname" class="col-sm-3 control-label">批量导入</label>
+            <div class="col-sm-6">
+            <input type="text" [value]="selectFileName" class="form-control" readonly="true"/>
+        </div> 
+            <!-- 给这个input 设置样式隐藏，切忌不可用display控制隐藏,可能不能跨浏览器 -->
+        <input type="file" id="file" accept=".xls,.xlsx" ng2FileSelect [uploader]="uploader" style="filter:alpha(opacity=0);opacity:0;width: 0;height: 0;" (change)="selectedFileOnChanged($event)" />
+        <!-- <input type="file" id="file" accept=".xls,.xlsx" ng2FileSelect [uploader]="uploader" style="display:none" (change)="selectedFileOnChanged($event)" /> -->
+        <input class="btn btn-default" type="button" value="浏览..." (click)="selectFile()"/>
+        <input class="btn btn-primary" type="button" value="上传" (click)="uploadFile()" [disabled]="btnUploadIsDisabled"/>
+        <!-- <label for="lastname" class="col-sm-3 control-label">批量导入</label>
+        <div class="col-sm-6">
+            <input type="file" accept=".xls,.xlsx" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)" />
+            <input class="btn btn-default" type="button" value="上传" (click)="uploadFile()" [disabled]="btnUploadIsDisabled"/>
+        </div> -->
+        </div>

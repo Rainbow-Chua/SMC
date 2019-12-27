@@ -1,0 +1,32 @@
+<!-- <div class="div1"> -->
+    <div class="container">
+        <div class="row">
+                <div class="col-sm-2">
+                    <p></p>
+                </div>
+                <div class="col-sm-8">
+                 <label for="file">Upload file</label>
+                </div>
+                <div class="col-sm-2">
+                    <p></p>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-sm-2">
+                    <p></p>
+                </div>
+                <div class="col-sm-8">
+                    <label>Select Excel file to be uploaded</label><input id="file" #file type="file" multiple (change)="upload(file)" />
+                    <span *ngIf="uploadProgress > 0 && uploadProgress < 100">
+                        {{ uploadProgress }}%
+                    </span>   
+                </div>
+            
+                <div class="col-sm-2">
+                    <p></p>
+                </div>
+        </div>
+                <br>
+    </div>
+  
+<!-- </div> -->
